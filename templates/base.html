@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    
+    <title>{% block title %}{% endblock %} snaks Webpage</title>
+    {% endblock %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css'%}">
+</head>
+<body>
+   
+    <header>
+       
+        <nav>
+            <ul>
+            
+           </ul>
+        </nav>
+    </header>
+    
+    {% block content %} 
+    {% endblock %}
+    <div id="footer">
+        {% block footer %}
+        &copy; Copyright 2022 by <a href="https://www.linkedin.com/in/alaa-abu-al-adoos-047428237/">Alaa abualadoos</a>.
+        {% endblock %}
+    </div>
+</body>
+</html>
