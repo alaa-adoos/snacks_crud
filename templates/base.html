@@ -12,11 +12,26 @@
    
     <header>
        
-        <nav>
+        {% comment %} <nav>
             <ul>
-            
+             <li><a href={% url 'snack_list' %}>snack list </a></li>
+             <li><a href={% url 'create_list' %}>add snack</a></li>
            </ul>
-        </nav>
+        </nav> {% endcomment %}
+        <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+  <a class="navbar-brand text-light" href="{% url 'snack_list' %}">Snacks</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active text-light" href="{% url 'snack_list' %}">Snack list </a>
+      <a class="nav-item nav-link text-light" href="{% url 'create_list' %}">add snack</a>
+
+   
+    </div>
+  </div>
+</nav>
     </header>
     
     {% block content %} 
